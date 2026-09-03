@@ -1,0 +1,617 @@
+<!--This is the part where we are designing the layout -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusConnect</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="#home" class="logo">
+                Campus<span>Connect</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Dark Mode Button -->
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                🌙
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" aria-label="Open Menu">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <main>
+
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-tag">
+                    🎓 Built for Students, by Students
+                </p>
+
+                <h1>
+                    Connect. Collaborate.
+                    <span>Belong.</span>
+                </h1>
+
+                <p class="hero-description">
+                    CampusConnect brings students together to find
+                    teammates, study partners, and lost items—all in
+                    one place.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#features" class="primary-btn">
+                        Explore Campus →
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+
+                <div class="floating-card card-one">
+                    🔍 Lost Something?
+                </div>
+
+                <div class="floating-card card-two">
+                    🤝 Find Your Team
+                </div>
+
+                <div class="floating-card card-three">
+                    📚 Study Together
+                </div>
+
+                <div class="hero-circle">
+                    🎓
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="about section">
+
+            <div class="section-heading">
+
+                <p class="section-tag">WHY CAMPUSCONNECT?</p>
+
+                <h2>
+                    Small Campus Problems.
+                    <span>One Smart Solution.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="problem-solution">
+
+                <div class="problem-box">
+
+                    <h3>The Problem 😕</h3>
+
+                    <ul>
+                        <li>Lost something on campus?</li>
+                        <li>Can't find teammates for your project?</li>
+                        <li>Looking for someone to study with?</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="solution-arrow">
+                    →
+                </div>
+
+
+                <div class="solution-box">
+
+                    <h3>The Solution 🚀</h3>
+
+                    <p>
+                        CampusConnect creates one simple space where
+                        students can help, collaborate, and connect.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section id="features" class="features section">
+
+            <div class="section-heading">
+
+                <p class="section-tag">EXPLORE THE PLATFORM</p>
+
+                <h2>
+                    Everything Students Need to
+                    <span>Stay Connected.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="feature-container">
+
+                <button class="feature-card active"
+                    data-feature="lost">
+
+                    <div class="feature-icon">🔍</div>
+
+                    <h3>Lost & Found</h3>
+
+                    <p>
+                        Report and discover lost items around campus.
+                    </p>
+
+                </button>
+
+
+                <button class="feature-card"
+                    data-feature="team">
+
+                    <div class="feature-icon">🤝</div>
+
+                    <h3>Team Finder</h3>
+
+                    <p>
+                        Find the right people for projects and events.
+                    </p>
+
+                </button>
+
+
+                <button class="feature-card"
+                    data-feature="study">
+
+                    <div class="feature-icon">📚</div>
+
+                    <h3>Study Circle</h3>
+
+                    <p>
+                        Connect with students learning the same topics.
+                    </p>
+
+                </button>
+
+            </div>
+
+
+            <!-- Dynamic Feature Display -->
+
+            <div class="feature-preview">
+
+                <div id="preview-icon">🔍</div>
+
+                <div>
+
+                    <h3 id="preview-title">
+                        Lost & Found
+                    </h3>
+
+                    <p id="preview-description">
+                        Quickly share information about lost or found
+                        items with other students.
+                    </p>
+
+                    <div id="preview-example">
+                        📍 Example: Black water bottle found near
+                        the library.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOST & FOUND FORM ================= -->
+
+<section id="campus-pulse" class="campus-pulse section">
+
+    <div class="section-heading">
+
+        <p class="section-tag">CAMPUS PULSE 🟢</p>
+
+        <h2>
+            Share What's Happening
+            <span>On Campus.</span>
+        </h2>
+
+        <p class="pulse-description">
+            Report a lost item, find teammates, or create a study group.
+        </p>
+
+    </div>
+
+
+    <!-- LOST & FOUND FORM -->
+
+    <div class="pulse-container">
+
+        <div class="pulse-form-box">
+
+            <h3>🔍 Report Lost or Found Item</h3>
+
+            <form id="lost-form">
+
+                <input
+                    type="text"
+                    id="item-name"
+                    placeholder="Item Name (Example: Water Bottle)"
+                    required
+                >
+
+                <select id="item-type" required>
+                    <option value="">Select Type</option>
+                    <option value="Lost">Lost</option>
+                    <option value="Found">Found</option>
+                </select>
+
+                <input
+                    type="text"
+                    id="item-location"
+                    placeholder="Where was it lost/found?"
+                    required
+                >
+
+                <textarea
+                    id="item-description"
+                    placeholder="Describe the item..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="primary-btn">
+                    Submit Report →
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- DISPLAY USER POSTS -->
+
+        <div class="posts-box">
+
+            <h3>📢 Recent Reports</h3>
+
+            <div id="lost-posts">
+
+                <!-- User posts will appear here -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        
+
+    <!-- ================= TEAM FINDER ================= -->
+
+<div class="team-section">
+
+    <div class="pulse-form-box">
+
+        <h3>🤝 Find Your Team</h3>
+
+        <form id="team-form">
+
+            <input
+                type="text"
+                id="team-name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="project-name"
+                placeholder="Project / Event Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="skills-needed"
+                placeholder="Skills Needed (Example: JavaScript, Design)"
+                required
+            >
+
+            <input
+                type="number"
+                id="members-needed"
+                placeholder="Members Needed"
+                min="1"
+                required
+            >
+
+            <button type="submit" class="primary-btn">
+                Find Teammates →
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- TEAM POSTS -->
+
+    <div class="posts-box">
+
+        <h3>🚀 Team Requests</h3>
+
+        <div id="team-posts">
+
+            <!-- Team requests will appear here -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= STUDY CIRCLE ================= -->
+
+<div class="study-section">
+
+    <!-- STUDY FORM -->
+
+    <div class="pulse-form-box">
+
+        <h3>📚 Create a Study Circle</h3>
+
+        <form id="study-form">
+
+            <input
+                type="text"
+                id="study-name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="text"
+                id="study-subject"
+                placeholder="Subject (Example: Data Structures)"
+                required
+            >
+
+            <input
+                type="text"
+                id="study-topic"
+                placeholder="Topic (Example: Arrays)"
+                required
+            >
+
+            <input
+                type="text"
+                id="study-time"
+                placeholder="Preferred Study Time"
+                required
+            >
+
+            <button type="submit" class="primary-btn">
+                Create Study Circle →
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- STUDY POSTS -->
+
+    <div class="posts-box">
+
+        <h3>📖 Active Study Circles</h3>
+
+        <div id="study-posts">
+
+            <!-- Study circles will appear here -->
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+        <!-- ================= TESTIMONIALS ================= -->
+
+        <section id="testimonials" class="testimonials section">
+
+            <div class="section-heading">
+
+                <p class="section-tag">STUDENT STORIES</p>
+
+                <h2>
+                    Real Connections.
+                    <span>Real Experiences.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="testimonial-container">
+
+                <article class="testimonial-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "I found two amazing teammates for my college
+                        project. It saved me so much time!"
+                    </p>
+
+                    <h4>— Aarav, Computer Science</h4>
+
+                </article>
+
+
+                <article class="testimonial-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "Someone returned my lost ID card through
+                        CampusConnect. Such a useful idea!"
+                    </p>
+
+                    <h4>— Ananya, Engineering</h4>
+
+                </article>
+
+
+                <article class="testimonial-card">
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        "The Study Circle feature helped me find
+                        people preparing for the same exam."
+                    </p>
+
+                    <h4>— Rohan, Mathematics</h4>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="contact section">
+
+            <div class="contact-content">
+
+                <div>
+
+                    <p class="section-tag">GET IN TOUCH</p>
+
+                    <h2>
+                        Have an Idea to Make
+                        Campus <span>Better?</span>
+                    </h2>
+
+                    <p>
+                        We'd love to hear your suggestions and ideas
+                        for improving CampusConnect.
+                    </p>
+
+                </div>
+
+
+                <form id="contact-form">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="primary-btn">
+                        Send Message →
+                    </button>
+
+                    <p id="form-message"></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <a href="#home" class="logo">
+            Campus<span>Connect</span>
+        </a>
+
+        <p>
+            Connecting students. Building better campuses.
+        </p>
+
+        <p class="copyright">
+            © 2026 CampusConnect
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
