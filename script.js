@@ -184,17 +184,21 @@ displayReports();
 
 function deleteReport(index) {
 
-    // Remove report from array
-    reports.splice(index, 1);
-
-    // Update localStorage
-    localStorage.setItem(
-        "reports",
-        JSON.stringify(reports)
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this report?"
     );
 
-    // Update webpage
-    displayReports();
+    if (confirmDelete) {
+
+        reports.splice(index, 1);
+
+        localStorage.setItem(
+            "reports",
+            JSON.stringify(reports)
+        );
+
+        displayReports();
+    }
 }
 
 // Submit new report
@@ -291,14 +295,21 @@ function displayTeamRequests() {
 
 function deleteTeamRequest(index) {
 
-    teamRequests.splice(index, 1);
-
-    localStorage.setItem(
-        "teamRequests",
-        JSON.stringify(teamRequests)
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this team request?"
     );
 
-    displayTeamRequests();
+    if (confirmDelete) {
+
+        teamRequests.splice(index, 1);
+
+        localStorage.setItem(
+            "teamRequests",
+            JSON.stringify(teamRequests)
+        );
+
+        displayTeamRequests();
+    }
 }
 
 
@@ -402,14 +413,21 @@ function displayStudyCircles() {
 
 function deleteStudyCircle(index) {
 
-    studyCircles.splice(index, 1);
-
-    localStorage.setItem(
-        "studyCircles",
-        JSON.stringify(studyCircles)
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this study circle?"
     );
 
-    displayStudyCircles();
+    if (confirmDelete) {
+
+        studyCircles.splice(index, 1);
+
+        localStorage.setItem(
+            "studyCircles",
+            JSON.stringify(studyCircles)
+        );
+
+        displayStudyCircles();
+    }
 }
 
 
