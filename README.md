@@ -37,6 +37,32 @@ The purpose of this project is to create a platform where students can connect, 
 - Profile customization
 - Notifications
 
+## 📸 Project Screenshots
+
+## 🏠 Home Page
+
+![Home Page](images/home.png)
+
+## 🔍 Lost & Found
+
+![Lost and Found](images/lostandfound.png)
+
+## 🤝 Team Finder
+
+![Team Finder](images/findt.png)
+
+## 📚 Study Circle
+
+![Study Circle](images/study.png)
+
+## 🌟 Student Stories
+
+![Student Stories](images/stories.png)
+
+## 📩 Contact Us
+
+![Contact Page](images/contact.png)
+
 ## Author
 
 Aryan Singh
