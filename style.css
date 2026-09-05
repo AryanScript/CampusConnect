@@ -3,14 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --accent: #06b6d4;
-    --background: #f8fafc;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --accent: #2563eb;
+
+    --background: #dbeafe;
+
     --surface: #ffffff;
+
     --text: #172033;
     --text-light: #64748b;
-    --border: #e2e8f0;
+    --border: #bfdbfe;
 }
 
 * {
@@ -25,8 +28,11 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
+
     background-color: var(--background);
+
     color: var(--text);
+
     line-height: 1.6;
 }
 
@@ -35,11 +41,10 @@ body {
 ================================ */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(248, 250, 252, 0.9);
+    background: rgba(255, 255, 255, 0.85);
+
     backdrop-filter: blur(10px);
+
     border-bottom: 1px solid var(--border);
 }
 
@@ -160,12 +165,21 @@ header {
 .primary-btn {
     background: var(--primary);
     color: white;
+
     border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .primary-btn:hover {
     background: var(--primary-dark);
+
     transform: translateY(-2px);
 }
 
@@ -777,6 +791,20 @@ footer p {
 .study-card p {
     color: var(--text-light);
     margin: 5px 0;
+}
+
+.feature-card,
+.testimonial-card,
+.pulse-form-box,
+.posts-box,
+.team-card,
+.study-card,
+.report-card {
+    background: var(--surface);
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
 }
 
 
