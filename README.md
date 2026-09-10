@@ -4,12 +4,12 @@ Campus Connect is a web-based platform designed to help college students connect
 
 ## Features
 
-- 🔍 Lost and Found
-- 📚 Study Circle
-- 📢 Student Posts
-- 👥 Connect with Students
-- 📝 Share Information
-- 💬 Community Interaction
+- Lost and Found
+- Study Circle
+- Student Posts
+- Connect with Students
+- Share Information
+- Community Interaction
 
 ## Technologies Used
 
@@ -37,29 +37,29 @@ The purpose of this project is to create a platform where students can connect, 
 - Profile customization
 - Notifications
 
-## 📸 Project Screenshots
+## Project Screenshots
 
-## 🏠 Home Page
+## Home Page
 
 ![Home Page](images/home.png)
 
-## 🔍 Lost & Found
+## Lost & Found
 
 ![Lost and Found](images/lostandfound.png)
 
-## 🤝 Team Finder
+## Team Finder
 
 ![Team Finder](images/findt.png)
 
-## 📚 Study Circle
+## Study Circle
 
 ![Study Circle](images/study.png)
 
-## 🌟 Student Stories
+## Student Stories
 
 ![Student Stories](images/stories.png)
 
-## 📩 Contact Us
+## Contact Us
 
 ![Contact Page](images/contact.png)
 
