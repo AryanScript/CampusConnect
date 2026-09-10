@@ -1,19 +1,15 @@
-/* This is the part where we are styling the page */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --accent: #2563eb;
-
-    --background: #dbeafe;
-
+    --primary: #8b5cf6;
+    --primary-dark: #6d28d9;
+    --accent: #c084fc;
+    --background: #ffffff;
     --surface: #ffffff;
-
-    --text: #172033;
-    --text-light: #64748b;
-    --border: #bfdbfe;
+    --text: #111827;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
 }
 
 * {
@@ -28,31 +24,23 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-
     background-color: var(--background);
-
     color: var(--text);
-
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-/* ===============================
-   NAVBAR
-================================ */
 
 header {
     background: rgba(255, 255, 255, 0.85);
-
     backdrop-filter: blur(10px);
-
     border-bottom: 1px solid var(--border);
+    transition: 0.3s ease;
 }
 
 .navbar {
     max-width: 1200px;
     margin: auto;
     padding: 18px 25px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,6 +80,7 @@ header {
 .menu-toggle {
     border: none;
     background: transparent;
+    color: var(--text);
     font-size: 20px;
     cursor: pointer;
 }
@@ -100,16 +89,11 @@ header {
     display: none;
 }
 
-/* ===============================
-   HERO SECTION
-================================ */
-
 .hero {
     min-height: 90vh;
     max-width: 1200px;
     margin: auto;
     padding: 80px 25px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -165,21 +149,15 @@ header {
 .primary-btn {
     background: var(--primary);
     color: white;
-
     border: none;
-
     padding: 14px 25px;
-
     border-radius: 10px;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 .primary-btn:hover {
     background: var(--primary-dark);
-
     transform: translateY(-2px);
 }
 
@@ -193,10 +171,6 @@ header {
     color: var(--primary);
 }
 
-/* ===============================
-   HERO VISUAL
-================================ */
-
 .hero-visual {
     width: 520px;
     height: 440px;
@@ -204,118 +178,61 @@ header {
     flex-shrink: 0;
 }
 
-/* ===============================
-   ORBIT
-================================ */
-
 .hero-visual::before {
     content: "";
-
     width: 330px;
     height: 330px;
-
-    border: 2px dashed rgba(79, 70, 229, 0.25);
-
+    border: 2px dashed rgba(139, 92, 246, 0.25);
     border-radius: 50%;
-
     position: absolute;
-
     top: 55px;
     left: 95px;
-
     z-index: 0;
 }
-
-
-/* ===============================
-   MAIN CIRCLE
-================================ */
 
 .hero-circle {
     width: 250px;
     height: 250px;
-
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        var(--accent)
-    );
-
+    background: linear-gradient(135deg, var(--primary), var(--accent));
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 90px;
-
     position: absolute;
-
-    /* Better centered position */
     top: 95px;
     left: 135px;
-
     z-index: 1;
-
     box-shadow: 0 20px 60px rgba(79, 70, 229, 0.3);
 }
 
-
-/* ===============================
-   FLOATING CARDS
-================================ */
-
 .floating-card {
     position: absolute;
-
     background: var(--surface);
-
+    color: var(--text);
     padding: 16px 24px;
-
     border-radius: 16px;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-
     font-weight: 600;
-
     white-space: nowrap;
-
     z-index: 2;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
-/* ===============================
-   LOST SOMETHING
-================================ */
 
 .card-one {
     top: 25px;
     left: 45px;
 }
 
-
-/* ===============================
-   FIND YOUR TEAM
-================================ */
-
 .card-two {
     top: 140px;
     right: -70px;
 }
 
-
-/* ===============================
-   STUDY TOGETHER
-================================ */
-
 .card-three {
     bottom: 20px;
     left: 70px;
 }
-
-/* ===============================
-   COMMON SECTIONS
-================================ */
 
 .section {
     padding: 100px 25px;
@@ -335,10 +252,6 @@ header {
     margin-top: 10px;
 }
 
-/* ===============================
-   ABOUT
-================================ */
-
 .about {
     background: var(--surface);
 }
@@ -346,7 +259,6 @@ header {
 .problem-solution {
     max-width: 1000px;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -391,14 +303,9 @@ header {
     color: var(--primary);
 }
 
-/* ===============================
-   FEATURES
-================================ */
-
 .feature-container {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -409,6 +316,7 @@ header {
     padding: 30px;
     border: 1px solid var(--border);
     background: var(--surface);
+    color: var(--text);
     border-radius: 18px;
     cursor: pointer;
     transition: 0.3s;
@@ -439,12 +347,11 @@ header {
     max-width: 800px;
     margin: 50px auto 0;
     padding: 30px;
-
     display: flex;
     gap: 25px;
     align-items: center;
-
     background: var(--surface);
+    color: var(--text);
     border: 1px solid var(--border);
     border-radius: 20px;
 }
@@ -460,14 +367,11 @@ header {
 
 #preview-example {
     background: #eef2ff;
+    color: #111827;
     padding: 12px;
     border-radius: 8px;
     font-size: 14px;
 }
-
-/* ===============================
-   TESTIMONIALS
-================================ */
 
 .testimonials {
     background: var(--surface);
@@ -476,7 +380,6 @@ header {
 .testimonial-container {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
@@ -486,6 +389,8 @@ header {
     padding: 30px;
     border: 1px solid var(--border);
     border-radius: 18px;
+    background: var(--surface);
+    color: var(--text);
 }
 
 .stars {
@@ -502,18 +407,12 @@ header {
     font-size: 14px;
 }
 
-/* ===============================
-   CONTACT
-================================ */
-
 .contact-content {
     max-width: 1000px;
     margin: auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
-
     align-items: center;
 }
 
@@ -534,6 +433,8 @@ header {
     padding: 14px;
     border: 1px solid var(--border);
     border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
     font-family: inherit;
     font-size: 15px;
 }
@@ -549,9 +450,10 @@ header {
     border-color: var(--primary);
 }
 
-/* ===============================
-   FOOTER
-================================ */
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: var(--text-light);
+}
 
 footer {
     background: #111827;
@@ -574,10 +476,6 @@ footer p {
     margin-top: 20px;
 }
 
-/* ===============================
-   CAMPUS PULSE
-================================ */
-
 .campus-pulse {
     background: var(--background);
 }
@@ -590,7 +488,6 @@ footer p {
 .pulse-container {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -599,6 +496,7 @@ footer p {
 .pulse-form-box,
 .posts-box {
     background: var(--surface);
+    color: var(--text);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px;
@@ -620,13 +518,10 @@ footer p {
 #lost-form textarea {
     width: 100%;
     padding: 14px;
-
     border: 1px solid var(--border);
     border-radius: 10px;
-
     background: var(--background);
     color: var(--text);
-
     font-family: inherit;
     font-size: 15px;
 }
@@ -636,14 +531,25 @@ footer p {
     resize: vertical;
 }
 
+#lost-form input::placeholder,
+#lost-form textarea::placeholder {
+    color: var(--text-light);
+}
+
+#lost-form input:focus,
+#lost-form select:focus,
+#lost-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
 .report-card {
     padding: 18px;
     margin-bottom: 15px;
-
     border: 1px solid var(--border);
     border-radius: 14px;
-
-    background: var(--background);
+    background: var(--surface);
+    color: var(--text);
 }
 
 .report-card h4 {
@@ -657,13 +563,10 @@ footer p {
 
 .report-type {
     display: inline-block;
-
     padding: 4px 10px;
     border-radius: 20px;
-
     font-size: 12px;
     font-weight: 600;
-
     margin-bottom: 10px;
 }
 
@@ -677,15 +580,9 @@ footer p {
     color: #16a34a;
 }
 
-
-/* ===============================
-   TEAM FINDER
-================================ */
-
 .team-section {
     max-width: 1100px;
     margin: 50px auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -700,15 +597,16 @@ footer p {
 #team-form input {
     width: 100%;
     padding: 14px;
-
     border: 1px solid var(--border);
     border-radius: 10px;
-
     background: var(--background);
     color: var(--text);
-
     font-family: inherit;
     font-size: 15px;
+}
+
+#team-form input::placeholder {
+    color: var(--text-light);
 }
 
 #team-form input:focus {
@@ -719,11 +617,10 @@ footer p {
 .team-card {
     padding: 18px;
     margin-bottom: 15px;
-
     border: 1px solid var(--border);
     border-radius: 14px;
-
-    background: var(--background);
+    background: var(--surface);
+    color: var(--text);
 }
 
 .team-card h4 {
@@ -735,15 +632,9 @@ footer p {
     margin: 5px 0;
 }
 
-
-/* ===============================
-   STUDY CIRCLE
-================================ */
-
 .study-section {
     max-width: 1100px;
     margin: 50px auto;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -758,15 +649,16 @@ footer p {
 #study-form input {
     width: 100%;
     padding: 14px;
-
     border: 1px solid var(--border);
     border-radius: 10px;
-
     background: var(--background);
     color: var(--text);
-
     font-family: inherit;
     font-size: 15px;
+}
+
+#study-form input::placeholder {
+    color: var(--text-light);
 }
 
 #study-form input:focus {
@@ -777,11 +669,10 @@ footer p {
 .study-card {
     padding: 18px;
     margin-bottom: 15px;
-
     border: 1px solid var(--border);
     border-radius: 14px;
-
-    background: var(--background);
+    background: var(--surface);
+    color: var(--text);
 }
 
 .study-card h4 {
@@ -801,16 +692,183 @@ footer p {
 .study-card,
 .report-card {
     background: var(--surface);
-
+    color: var(--text);
+    border: 1px solid var(--border);
     border-radius: 15px;
-
     box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+.delete-btn {
+    margin-top: 12px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================ */
+.delete-btn:hover {
+    opacity: 0.85;
+}
+
+body.dark-mode {
+    --background: #08080d;
+    --surface: #16141f;
+    --text: #ffffff;
+    --text-light: #d1cddc;
+    --border: #353044;
+    --primary: #8b5cf6;
+    --primary-dark: #6d28d9;
+    --accent: #c084fc;
+}
+
+body.dark-mode header {
+    background: rgba(8, 8, 13, 0.92);
+    border-bottom: 1px solid var(--border);
+}
+
+body.dark-mode .nav-links a {
+    color: var(--text-light);
+}
+
+body.dark-mode .nav-links a:hover {
+    color: var(--primary);
+}
+
+body.dark-mode #theme-toggle,
+body.dark-mode .menu-toggle {
+    color: var(--text);
+}
+
+body.dark-mode .feature-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .pulse-form-box,
+body.dark-mode .posts-box,
+body.dark-mode .team-card,
+body.dark-mode .study-card,
+body.dark-mode .report-card {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode #lost-form input,
+body.dark-mode #lost-form select,
+body.dark-mode #lost-form textarea {
+    background: var(--background);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode #lost-form input::placeholder,
+body.dark-mode #lost-form textarea::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .report-card {
+    background: var(--background);
+}
+
+body.dark-mode .report-card p {
+    color: var(--text-light);
+}
+
+body.dark-mode #team-form input {
+    background: var(--background);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode #team-form input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .team-card {
+    background: var(--background);
+}
+
+body.dark-mode .team-card p {
+    color: var(--text-light);
+}
+
+body.dark-mode #study-form input {
+    background: var(--background);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode #study-form input::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .study-card {
+    background: var(--background);
+}
+
+body.dark-mode .study-card p {
+    color: var(--text-light);
+}
+
+body.dark-mode .problem-box {
+    background: #24131b;
+    border-color: #6b2737;
+    color: #ffffff;
+}
+
+body.dark-mode .problem-box ul {
+    color: var(--text-light);
+}
+
+body.dark-mode .solution-box {
+    background: #121f1b;
+    border-color: #246b52;
+    color: #ffffff;
+}
+
+body.dark-mode .solution-box p {
+    color: var(--text-light);
+}
+
+body.dark-mode #preview-example {
+    background: #24202f;
+    color: #ffffff;
+    border: 1px solid var(--border);
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode #contact-form input::placeholder,
+body.dark-mode #contact-form textarea::placeholder {
+    color: var(--text-light);
+}
+
+body.dark-mode .floating-card {
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .about,
+body.dark-mode .testimonials {
+    background: var(--surface);
+}
+
+body.dark-mode .campus-pulse {
+    background: var(--background);
+}
 
 @media (max-width: 900px) {
 
@@ -819,18 +877,12 @@ footer p {
     }
 
     .team-section {
-    grid-template-columns: 1fr;
-}
-    
+        grid-template-columns: 1fr;
+    }
+
     .study-section {
-    grid-template-columns: 1fr;
-}
-
-}
-
-/* Tablet */
-
-@media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
 
     .hero {
         flex-direction: column;
@@ -868,11 +920,7 @@ footer p {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
 }
-
-
-/* Mobile */
 
 @media (max-width: 650px) {
 
@@ -886,6 +934,20 @@ footer p {
 
     .menu-toggle {
         display: block;
+    }
+
+    .nav-links.show-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+        gap: 20px;
     }
 
     .hero {
@@ -918,83 +980,4 @@ footer p {
         flex-direction: column;
         text-align: center;
     }
-
-}
-
-/* ===============================
-   DARK MODE
-================================ */
-
-body.dark-mode {
-    --background: #111827;
-    --surface: #1f2937;
-    --text: #f9fafb;
-    --text-light: #cbd5e1;
-    --border: #374151;
-}
-
-body.dark-mode header {
-    background: rgba(17, 24, 39, 0.9);
-}
-
-body.dark-mode .problem-box {
-    background: #3f1d2a;
-    border-color: #7f1d3a;
-}
-
-body.dark-mode .solution-box {
-    background: #12333a;
-    border-color: #155e75;
-}
-
-body.dark-mode #preview-example {
-    background: #312e81;
-}
-
-
-
-@media (max-width: 650px) {
-
-    .nav-links.show-menu {
-        display: flex;
-        flex-direction: column;
-
-        position: absolute;
-        top: 70px;
-        left: 0;
-
-        width: 100%;
-        padding: 25px;
-
-        background: var(--surface);
-        border-bottom: 1px solid var(--border);
-
-        text-align: center;
-        gap: 20px;
-    }
-
-}
-
-
-/* ===============================
-   DELETE BUTTON
-================================ */
-
-.delete-btn {
-    margin-top: 12px;
-    padding: 8px 14px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: #ef4444;
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 14px;
-}
-
-.delete-btn:hover {
-    opacity: 0.85;
 }
