@@ -1,5 +1,6 @@
 <!--This is the part where we are designing the layout -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +15,6 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
     <header>
         <nav class="navbar">
 
@@ -23,7 +22,6 @@
                 Campus<span>Connect</span>
             </a>
 
-            <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -32,21 +30,16 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Dark Mode Button -->
             <button id="theme-toggle" aria-label="Toggle Dark Mode">
                 🌙
             </button>
 
-            <!-- Mobile Menu Button -->
             <button class="menu-toggle" aria-label="Open Menu">
                 ☰
             </button>
 
         </nav>
     </header>
-
-
-    <!-- ================= HOME ================= -->
 
     <main>
 
@@ -83,8 +76,6 @@
 
             </div>
 
-
-            <!-- Hero Visual -->
             <div class="hero-visual">
 
                 <div class="floating-card card-one">
@@ -107,9 +98,6 @@
 
         </section>
 
-
-        <!-- ================= ABOUT ================= -->
-
         <section id="about" class="about section">
 
             <div class="section-heading">
@@ -122,7 +110,6 @@
                 </h2>
 
             </div>
-
 
             <div class="problem-solution">
 
@@ -138,11 +125,9 @@
 
                 </div>
 
-
                 <div class="solution-arrow">
                     →
                 </div>
-
 
                 <div class="solution-box">
 
@@ -159,9 +144,6 @@
 
         </section>
 
-
-        <!-- ================= FEATURES ================= -->
-
         <section id="features" class="features section">
 
             <div class="section-heading">
@@ -174,7 +156,6 @@
                 </h2>
 
             </div>
-
 
             <div class="feature-container">
 
@@ -191,7 +172,6 @@
 
                 </button>
 
-
                 <button class="feature-card"
                     data-feature="team">
 
@@ -204,7 +184,6 @@
                     </p>
 
                 </button>
-
 
                 <button class="feature-card"
                     data-feature="study">
@@ -220,9 +199,6 @@
                 </button>
 
             </div>
-
-
-            <!-- Dynamic Feature Display -->
 
             <div class="feature-preview">
 
@@ -250,224 +226,191 @@
 
         </section>
 
+        <section id="campus-pulse" class="campus-pulse section">
 
-        <!-- ================= LOST & FOUND FORM ================= -->
+            <div class="section-heading">
 
-<section id="campus-pulse" class="campus-pulse section">
+                <p class="section-tag">CAMPUS PULSE 🟢</p>
 
-    <div class="section-heading">
+                <h2>
+                    Share What's Happening
+                    <span>On Campus.</span>
+                </h2>
 
-        <p class="section-tag">CAMPUS PULSE 🟢</p>
+                <p class="pulse-description">
+                    Report a lost item, find teammates, or create a study group.
+                </p>
 
-        <h2>
-            Share What's Happening
-            <span>On Campus.</span>
-        </h2>
+            </div>
 
-        <p class="pulse-description">
-            Report a lost item, find teammates, or create a study group.
-        </p>
+            <div class="pulse-container">
 
-    </div>
+                <div class="pulse-form-box">
 
+                    <h3>🔍 Report Lost or Found Item</h3>
 
-    <!-- LOST & FOUND FORM -->
+                    <form id="lost-form">
 
-    <div class="pulse-container">
+                        <input
+                            type="text"
+                            id="item-name"
+                            placeholder="Item Name (Example: Water Bottle)"
+                            required
+                        >
 
-        <div class="pulse-form-box">
+                        <select id="item-type" required>
+                            <option value="">Select Type</option>
+                            <option value="Lost">Lost</option>
+                            <option value="Found">Found</option>
+                        </select>
 
-            <h3>🔍 Report Lost or Found Item</h3>
+                        <input
+                            type="text"
+                            id="item-location"
+                            placeholder="Where was it lost/found?"
+                            required
+                        >
 
-            <form id="lost-form">
+                        <textarea
+                            id="item-description"
+                            placeholder="Describe the item..."
+                            required
+                        ></textarea>
 
-                <input
-                    type="text"
-                    id="item-name"
-                    placeholder="Item Name (Example: Water Bottle)"
-                    required
-                >
+                        <button type="submit" class="primary-btn">
+                            Submit Report →
+                        </button>
 
-                <select id="item-type" required>
-                    <option value="">Select Type</option>
-                    <option value="Lost">Lost</option>
-                    <option value="Found">Found</option>
-                </select>
+                    </form>
 
-                <input
-                    type="text"
-                    id="item-location"
-                    placeholder="Where was it lost/found?"
-                    required
-                >
+                </div>
 
-                <textarea
-                    id="item-description"
-                    placeholder="Describe the item..."
-                    required
-                ></textarea>
+                <div class="posts-box">
 
-                <button type="submit" class="primary-btn">
-                    Submit Report →
-                </button>
+                    <h3>📢 Recent Reports</h3>
 
-            </form>
+                    <div id="lost-posts">
 
-        </div>
+                    </div>
 
+                </div>
 
-        <!-- DISPLAY USER POSTS -->
+            </div>
 
-        <div class="posts-box">
+        </section>
 
-            <h3>📢 Recent Reports</h3>
+        <div class="team-section">
 
-            <div id="lost-posts">
+            <div class="pulse-form-box">
 
-                <!-- User posts will appear here -->
+                <h3>🤝 Find Your Team</h3>
+
+                <form id="team-form">
+
+                    <input
+                        type="text"
+                        id="team-name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="project-name"
+                        placeholder="Project / Event Name"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="skills-needed"
+                        placeholder="Skills Needed (Example: JavaScript, Design)"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="members-needed"
+                        placeholder="Members Needed"
+                        min="1"
+                        required
+                    >
+
+                    <button type="submit" class="primary-btn">
+                        Find Teammates →
+                    </button>
+
+                </form>
+
+            </div>
+
+            <div class="posts-box">
+
+                <h3>🚀 Team Requests</h3>
+
+                <div id="team-posts">
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+        <div class="study-section">
 
-</section>
-        
+            <div class="pulse-form-box">
 
-    <!-- ================= TEAM FINDER ================= -->
+                <h3>📚 Create a Study Circle</h3>
 
-<div class="team-section">
+                <form id="study-form">
 
-    <div class="pulse-form-box">
+                    <input
+                        type="text"
+                        id="study-name"
+                        placeholder="Your Name"
+                        required
+                    >
 
-        <h3>🤝 Find Your Team</h3>
+                    <input
+                        type="text"
+                        id="study-subject"
+                        placeholder="Subject (Example: Data Structures)"
+                        required
+                    >
 
-        <form id="team-form">
+                    <input
+                        type="text"
+                        id="study-topic"
+                        placeholder="Topic (Example: Arrays)"
+                        required
+                    >
 
-            <input
-                type="text"
-                id="team-name"
-                placeholder="Your Name"
-                required
-            >
+                    <input
+                        type="text"
+                        id="study-time"
+                        placeholder="Preferred Study Time"
+                        required
+                    >
 
-            <input
-                type="text"
-                id="project-name"
-                placeholder="Project / Event Name"
-                required
-            >
+                    <button type="submit" class="primary-btn">
+                        Create Study Circle →
+                    </button>
 
-            <input
-                type="text"
-                id="skills-needed"
-                placeholder="Skills Needed (Example: JavaScript, Design)"
-                required
-            >
+                </form>
 
-            <input
-                type="number"
-                id="members-needed"
-                placeholder="Members Needed"
-                min="1"
-                required
-            >
+            </div>
 
-            <button type="submit" class="primary-btn">
-                Find Teammates →
-            </button>
+            <div class="posts-box">
 
-        </form>
+                <h3>📖 Active Study Circles</h3>
 
-    </div>
+                <div id="study-posts">
 
+                </div>
 
-    <!-- TEAM POSTS -->
-
-    <div class="posts-box">
-
-        <h3>🚀 Team Requests</h3>
-
-        <div id="team-posts">
-
-            <!-- Team requests will appear here -->
+            </div>
 
         </div>
-
-    </div>
-
-</div>
-
-
-<!-- ================= STUDY CIRCLE ================= -->
-
-<div class="study-section">
-
-    <!-- STUDY FORM -->
-
-    <div class="pulse-form-box">
-
-        <h3>📚 Create a Study Circle</h3>
-
-        <form id="study-form">
-
-            <input
-                type="text"
-                id="study-name"
-                placeholder="Your Name"
-                required
-            >
-
-            <input
-                type="text"
-                id="study-subject"
-                placeholder="Subject (Example: Data Structures)"
-                required
-            >
-
-            <input
-                type="text"
-                id="study-topic"
-                placeholder="Topic (Example: Arrays)"
-                required
-            >
-
-            <input
-                type="text"
-                id="study-time"
-                placeholder="Preferred Study Time"
-                required
-            >
-
-            <button type="submit" class="primary-btn">
-                Create Study Circle →
-            </button>
-
-        </form>
-
-    </div>
-
-
-    <!-- STUDY POSTS -->
-
-    <div class="posts-box">
-
-        <h3>📖 Active Study Circles</h3>
-
-        <div id="study-posts">
-
-            <!-- Study circles will appear here -->
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-        <!-- ================= TESTIMONIALS ================= -->
 
         <section id="testimonials" class="testimonials section">
 
@@ -481,7 +424,6 @@
                 </h2>
 
             </div>
-
 
             <div class="testimonial-container">
 
@@ -498,7 +440,6 @@
 
                 </article>
 
-
                 <article class="testimonial-card">
 
                     <div class="stars">★★★★★</div>
@@ -511,7 +452,6 @@
                     <h4>— Ananya, Engineering</h4>
 
                 </article>
-
 
                 <article class="testimonial-card">
 
@@ -529,9 +469,6 @@
             </div>
 
         </section>
-
-
-        <!-- ================= CONTACT ================= -->
 
         <section id="contact" class="contact section">
 
@@ -552,7 +489,6 @@
                     </p>
 
                 </div>
-
 
                 <form id="contact-form">
 
@@ -590,9 +526,6 @@
 
     </main>
 
-
-    <!-- ================= FOOTER ================= -->
-
     <footer>
 
         <a href="#home" class="logo">
@@ -609,9 +542,9 @@
 
     </footer>
 
-
     <script src="script.js"></script>
 
 </body>
 
 </html>
+
