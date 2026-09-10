@@ -41,27 +41,20 @@ The purpose of this project is to create a platform where students can connect, 
 
 ## Home Page
 
-![Home Page](images/home.png)
+![CampusConnect Home Page](screenshots/home.png)
 
 ## Lost & Found
 
-![Lost and Found](images/lostandfound.png)
-
-## Team Finder
-
-![Team Finder](images/findt.png)
-
-## Study Circle
-
-![Study Circle](images/study.png)
+![Lost and Found](screenshots/lostandfound.png)
 
 ## Student Stories
 
-![Student Stories](images/stories.png)
+![Student Stories](screenshots/stories.png)
+
 
 ## Contact Us
 
-![Contact Page](images/contact.png)
+![Contact CampusConnect](screenshots/contact.png)
 
 ## Author
 
