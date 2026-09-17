@@ -548,3 +548,29 @@
 
 </html>
 
+ function findDuplicates(arr1, arr2) {
+
+
+2	+
+     const duplicates = [];
+3	+
+     for (let i = 0; i < arr1.length; i++) {
+4	Comment view+
+       for (let j = 0; j < arr2.length; j++) {
+
+5	+
+         if (arr1[i] === arr2[j]) {
+6	+
+           duplicates.push(arr1[i]);
+7	+
+         }
+8	+
+       }
+9	+
+     }
+10	+
+     return duplicates;
+11	+
+   }
+
+
