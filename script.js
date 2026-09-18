@@ -359,4 +359,4 @@ studyForm.addEventListener("submit", function (event) {
 
     studyForm.reset();
 });
-
+// this is the end of the script.js file
